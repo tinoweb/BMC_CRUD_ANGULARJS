@@ -1,0 +1,48 @@
+<div class="container mt-5">
+		<a href="#/produto/novo" class="btn btn-white waves-effect waves-light" style="position: relative;left: -6px;">+ Novo produto</a>
+	<div class="card">
+		<div class="card-head">
+		</div>
+        <div class="card-body">
+            <form class="form-inline mb-1">
+                <div class="md-form my-0">
+                    <div class="waves-input-wrapper waves-effect waves-light">
+                        <input class="form-control mr-sm-2" type="text" placeholder="Pesquisar" ng-model="pesquisar" aria-label="Search">
+                    </div>
+                </div>
+            </form>
+            <table class="table">
+
+                <!--Table head-->
+                <thead class="mdb-color darken-3">
+                    <tr class="text-white">
+                        <th>Nome</th>
+                        <th>Descrição</th>
+                        <th>Valor de Compra</th>
+                        <th>Valor de Venda</th>
+                        <th>Ativo</th>
+                        <th>Ação</th>
+                    </tr>
+                </thead>
+                <!--Table head-->
+                <!--Table body-->
+                <tbody ng-repeat="Produto in Produtos | filter:pesquisar">
+                    <tr>
+                        <td>{{Produto.nome}}</td>
+                        <td>{{Produto.descricao}}</td>
+                        <td>{{Produto.valordecompra }}</td>
+                        <td>{{Produto.valordevenda}}</td>
+                        <td>{{Produto.ativo}}</td>
+                        <td>
+                            <a href="#/produto/edit/{{Produto.id}}" class="badge blue">Edit</a>
+                            <a href="#" ng-click="removeProduto(Produto.id)" class="badge red">Del</a>
+                            <a href="#/produto/mostrar/{{Produto.id}}" class="badge green">Show</a>
+                        </td>
+                    </tr>
+                </tbody>
+                <!--Table body-->
+            </table>
+            <!--Table-->
+        </div>
+    </div>
+</div>

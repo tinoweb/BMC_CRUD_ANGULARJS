@@ -1,0 +1,35 @@
+<div class="container mt-5">
+		<a href="#/produtos" class="btn btn-white waves-effect waves-light" style="position: relative;left: -6px;"><- Todos produtos</a>
+	<div class="card">
+		<div class="card-head">
+		</div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-2">
+                    <div class="view overlay z-depth-1">
+                        <img src="http://localhost:8000/Imagens/{{Produto.imagem}}" class="img-fluid" alt="First sample image">
+                        <a>
+                            <div class="mask rgba-white-slight waves-effect waves-light"></div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-1">
+                    <p>Ativo: <h4>{{Produto.ativo}}</h4></p>
+                </div>
+                <div class="col-md-2">
+                    <p>Nome: <h4>{{Produto.nome}}</h4></p>
+                </div>
+                <div class="col-md-3">
+                    <p>Descricao: <h4>{{Produto.descricao}}</h4></p>
+                </div>
+                <div class="col-md-2"> 
+                    <p>Valor Compra: <h4>{{Produto.valordecompra }}</h4></p>
+                </div>
+                <div class="col-md-2">
+                    <p>Valor Venda: <h4>{{Produto.valordevenda}}</h4></p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
